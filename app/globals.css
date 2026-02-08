@@ -5,16 +5,14 @@
 @layer base {
   body {
     @apply bg-brand-black text-white font-sans;
-    background-color: #0B0B0B; 
-    color: #FFFFFF;
+    background-color: #0B0B0B; /* Hard fallback */
   }
 }
 
-/* Custom Utilities for Glassmorphism */
+/* Glassmorphism Utilities */
 .glass-card {
   @apply bg-white/5 backdrop-blur-md border border-brand-border;
 }
-
 .glass-nav {
-  @apply bg-[#0B0B0B]/80 backdrop-blur-xl border-b border-white/5;
+  @apply bg-[#0B0B0B]/90 backdrop-blur-xl border-b border-white/5;
 }

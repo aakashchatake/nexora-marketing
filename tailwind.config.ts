@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // The specific Webflow colors
         "brand-black": "#0B0B0B", // Deep Void
         "brand-orange": "#FF6A00", // Nexora Orange
         "brand-gray": "#A3A3A3", // Muted Text
@@ -17,11 +16,7 @@ const config: Config = {
         "brand-border": "#262626", // Borders
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        sans: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
