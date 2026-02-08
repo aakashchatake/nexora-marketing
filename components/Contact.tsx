@@ -1,136 +1,107 @@
-'use client';
+import React from 'react';
+import { Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
 
-import { useState } from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    institution: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', institution: '', message: '' });
-    alert('Thank you for reaching out! We will contact you soon.');
-  };
-
+const Contact = () => {
   return (
-    <section id="contact" className="py-20 md:py-28 px-6 bg-brand-black">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">Get in Touch</h2>
-          <p className="text-base md:text-lg text-brand-muted leading-relaxed max-w-2xl mx-auto">Have questions about Nexora? Get in touch with our team today.</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Info Cards */}
-          <div className="space-y-6">
-            <div className="p-6 md:p-8 border border-brand-border rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-              <div className="flex items-start gap-4">
-                <Mail className="w-6 h-6 text-brand-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <p className="text-brand-muted">contact@nexora.com</p>
-                </div>
-              </div>
+    <section id="contact" className="py-20 md:py-28 bg-[#0B0B0B] relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          
+          {/* Left: Contact Info */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-[#A3A3A3] text-lg leading-relaxed max-w-lg">
+                Ready to transform your institution? Our team at Chatake Innoworks is here to help you deploy Nexora.
+              </p>
             </div>
 
-            <div className="p-6 md:p-8 border border-brand-border rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-              <div className="flex items-start gap-4">
-                <Phone className="w-6 h-6 text-brand-accent flex-shrink-0 mt-1" />
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white/5 border border-[#262626] hover:border-[#FF6A00]/50 transition-colors">
+                <div className="p-3 rounded-lg bg-[#FF6A00]/10 text-[#FF6A00]">
+                  <Mail className="w-6 h-6" />
+                </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                  <p className="text-brand-muted">+1 (555) 123-4567</p>
+                  <h3 className="text-white font-semibold mb-1">Email Us</h3>
+                  <a href="mailto:admin@chatakeinnoworks.com" className="text-[#A3A3A3] hover:text-[#FF6A00] transition-colors">
+                    admin@chatakeinnoworks.com
+                  </a>
+                  <div className="mt-1 text-sm text-[#A3A3A3]">
+                    nexora@chatakeinnoworks.com
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="p-6 md:p-8 border border-brand-border rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-brand-accent flex-shrink-0 mt-1" />
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white/5 border border-[#262626] hover:border-[#FF6A00]/50 transition-colors">
+                <div className="p-3 rounded-lg bg-[#FF6A00]/10 text-[#FF6A00]">
+                  <Phone className="w-6 h-6" />
+                </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
-                  <p className="text-brand-muted">123 Tech Street, Innovation City, IC 12345</p>
+                  <h3 className="text-white font-semibold mb-1">Call Us</h3>
+                  <a href="tel:+918600182228" className="text-[#A3A3A3] hover:text-[#FF6A00] transition-colors">
+                    +91 86001 82228
+                  </a>
+                  <p className="text-sm text-[#525252] mt-1">Mon-Fri, 9am-6pm IST</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 rounded-xl bg-white/5 border border-[#262626] hover:border-[#FF6A00]/50 transition-colors">
+                <div className="p-3 rounded-lg bg-[#FF6A00]/10 text-[#FF6A00]">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-1">Visit Us</h3>
+                  <p className="text-[#A3A3A3] leading-relaxed">
+                    Chatake Innoworks Pvt. Ltd.<br />
+                    Nehru Industrial Estate, Damani Nagar,<br />
+                    Solapur - 413001, Maharashtra, India.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">Full Name</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="John Doe"
-                className="w-full px-4 py-3 bg-white/5 border border-brand-border rounded-xl text-white placeholder-brand-muted focus:outline-none focus:border-brand-accent focus:bg-white/10 transition-colors min-h-[48px]"
-              />
-            </div>
+          {/* Right: Contact Form */}
+          <div className="relative">
+            <form className="space-y-4 p-8 rounded-2xl bg-white/5 border border-[#262626]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-[#A3A3A3]">First Name</label>
+                  <input type="text" className="w-full px-4 py-3 bg-[#0B0B0B] border border-[#262626] rounded-lg text-white focus:outline-none focus:border-[#FF6A00] transition-colors" placeholder="John" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-[#A3A3A3]">Last Name</label>
+                  <input type="text" className="w-full px-4 py-3 bg-[#0B0B0B] border border-[#262626] rounded-lg text-white focus:outline-none focus:border-[#FF6A00] transition-colors" placeholder="Doe" />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-[#A3A3A3]">Email Address</label>
+                <input type="email" className="w-full px-4 py-3 bg-[#0B0B0B] border border-[#262626] rounded-lg text-white focus:outline-none focus:border-[#FF6A00] transition-colors" placeholder="john@institution.edu" />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="john@institution.edu"
-                className="w-full px-4 py-3 bg-white/5 border border-brand-border rounded-xl text-white placeholder-brand-muted focus:outline-none focus:border-brand-accent focus:bg-white/10 transition-colors min-h-[48px]"
-              />
-            </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-[#A3A3A3]">Institution Name</label>
+                <input type="text" className="w-full px-4 py-3 bg-[#0B0B0B] border border-[#262626] rounded-lg text-white focus:outline-none focus:border-[#FF6A00] transition-colors" placeholder="Solapur Institute of Technology" />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">Institution Name</label>
-              <input
-                type="text"
-                name="institution"
-                value={formData.institution}
-                onChange={handleChange}
-                required
-                placeholder="Your University"
-                className="w-full px-4 py-3 bg-white/5 border border-brand-border rounded-xl text-white placeholder-brand-muted focus:outline-none focus:border-brand-accent focus:bg-white/10 transition-colors min-h-[48px]"
-              />
-            </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-[#A3A3A3]">Message</label>
+                <textarea rows={4} className="w-full px-4 py-3 bg-[#0B0B0B] border border-[#262626] rounded-lg text-white focus:outline-none focus:border-[#FF6A00] transition-colors" placeholder="Tell us about your requirements..." />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">Message</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                placeholder="Tell us about your needs..."
-                rows={4}
-                className="w-full px-4 py-3 bg-white/5 border border-brand-border rounded-xl text-white placeholder-brand-muted focus:outline-none focus:border-brand-accent focus:bg-white/10 transition-colors resize-none"
-              />
-            </div>
+              <button type="submit" className="w-full py-4 bg-[#FF6A00] hover:bg-orange-600 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2 mt-4">
+                Send Message <ArrowRight className="w-5 h-5" />
+              </button>
+            </form>
+          </div>
 
-            <button
-              type="submit"
-              className="w-full px-6 py-3 bg-brand-accent text-white font-semibold rounded-xl hover:opacity-90 transition-opacity min-h-[48px]"
-            >
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Contact;
