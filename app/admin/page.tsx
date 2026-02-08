@@ -1,44 +1,26 @@
-import { Lock } from 'lucide-react';
-
-export default function AdminPage() {
+"use client";
+import React, { useState } from 'react';
+export default function AdminLogin() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email === "admin.nexus@chatakeinnoworks.com" && password === "Nexus#Solapur@2026!CI") {
+      localStorage.setItem('nexus_admin_session', 'true');
+      window.location.href = window.location.pathname.replace(/\/admin\/?$/, '/admin/dashboard');
+    } else {
+      alert("Unauthorized Access");
+    }
+  };
   return (
-    <div className="min-h-screen bg-brand-black flex items-center justify-center px-6">
-      <div className="max-w-md w-full text-center">
-        {/* Icon */}
-        <div className="mb-6 flex justify-center">
-          <div className="p-4 rounded-full bg-brand-accent/10 border border-brand-accent/30">
-            <Lock className="w-8 h-8 text-brand-accent" />
-          </div>
-        </div>
-
-        {/* Content */}
-        <h1 className="text-4xl md:text-5xl font-semibold text-white mb-3">Corporate Login</h1>
-        <p className="text-lg text-brand-muted mb-8 leading-relaxed">
-          The corporate login system is coming soon. We're building a secure platform for institutional administrators.
-        </p>
-
-        {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="/"
-            className="px-8 py-3 bg-brand-accent text-white font-semibold rounded-xl hover:opacity-90 transition-opacity text-center min-h-[48px] flex items-center justify-center"
-          >
-            Back to Home
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 border border-brand-border text-white font-semibold rounded-xl hover:bg-white/5 transition-colors text-center min-h-[48px] flex items-center justify-center"
-          >
-            Request Access
-          </a>
-        </div>
-
-        {/* Status Badge */}
-        <div className="mt-12 p-4 border border-brand-border rounded-xl bg-white/5">
-          <p className="text-sm text-brand-muted">
-            Need administrative access? Contact our team at <span className="text-white font-medium">admin@nexora.com</span>
-          </p>
-        </div>
+    <div className="min-h-screen bg-[#0B0B0B] flex items-center justify-center">
+      <div className="w-full max-w-md bg-[#141414] border border-[#262626] rounded-2xl p-8">
+        <h1 className="text-2xl font-bold text-white mb-8 text-center uppercase tracking-widest">Corporate Access</h1>
+        <form onSubmit={handleLogin} className="space-y-6">
+          <input type="email" placeholder="Email" className="w-full bg-[#0B0B0B] border border-[#262626] rounded-lg p-3 text-white outline-none" onChange={(e) => setEmail(e.target.value)} required />
+          <input type="password" placeholder="Key" className="w-full bg-[#0B0B0B] border border-[#262626] rounded-lg p-3 text-white outline-none" onChange={(e) => setPassword(e.target.value)} required />
+          <button type="submit" className="w-full py-4 bg-[#FF6A00] text-white font-bold rounded-lg hover:bg-orange-600 transition-all">LOGIN</button>
+        </form>
       </div>
     </div>
   );
