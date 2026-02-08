@@ -10,8 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         "brand-black": "#0B0B0B", 
-        "brand-orange": "#FF6A00", 
+        "brand-orange": "#FF6A00",
+        "brand-accent": "#FF6A00", // Alias for brand-orange
         "brand-gray": "#A3A3A3",
+        "brand-muted": "#A3A3A3", // Alias for brand-gray
         "brand-surface": "#141414",
         "brand-border": "#262626",
       },
