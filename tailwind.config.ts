@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "brand-black": "#0B0B0B", // Deep Void
-        "brand-orange": "#FF6A00", // Nexora Orange
-        "brand-gray": "#A3A3A3", // Muted Text
-        "brand-surface": "#141414", // Cards
-        "brand-border": "#262626", // Borders
+        "brand-black": "#0B0B0B", 
+        "brand-orange": "#FF6A00", 
+        "brand-gray": "#A3A3A3",
+        "brand-surface": "#141414",
+        "brand-border": "#262626",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
