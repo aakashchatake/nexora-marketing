@@ -2,16 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-[#0B0B0B] text-white font-sans;
-    background-color: #0B0B0B;
-  }
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 11, 11, 11;
+  --background-end-rgb: 11, 11, 11;
 }
 
-.glass-card {
-  @apply bg-white/5 backdrop-blur-md border border-[#262626];
-}
-.glass-nav {
-  @apply bg-[#0B0B0B]/80 backdrop-blur-xl border-b border-white/5;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #0B0B0B;
 }

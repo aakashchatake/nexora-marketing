@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Play } from 'lucide-react';
 import { asset } from '@/lib/assets'; 
 
 const Hero = () => {
