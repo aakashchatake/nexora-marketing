@@ -11,17 +11,17 @@ export default function Trust() {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-brand-black">
+    <section className="py-20 md:py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
           <p className="text-sm text-brand-accent font-semibold uppercase tracking-wide mb-3">
             Trusted by leaders
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-4">
             Trusted by leading educational institutions worldwide
           </h2>
-          <p className="text-base md:text-lg text-brand-muted leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
             Join hundreds of institutions that are transforming education with Nexora
           </p>
         </div>

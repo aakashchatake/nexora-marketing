@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav h-20 flex items-center">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-20 flex items-center bg-[#0B0B0B] border-b border-[#262626]">
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold tracking-wide text-white">NEXORA</Link>
         <div className="hidden md:flex items-center gap-8">

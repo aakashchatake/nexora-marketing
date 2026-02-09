@@ -3,11 +3,11 @@ import { asset } from '@/lib/assets';
 
 const ImageCollage = () => {
   return (
-    <section className="py-20 md:py-28 px-6 bg-[#0B0B0B]">
+    <section className="py-20 md:py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-4">
             Academic Excellence in Action
           </h2>
           <p className="text-lg text-[#A3A3A3] max-w-2xl mx-auto">

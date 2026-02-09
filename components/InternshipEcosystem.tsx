@@ -3,13 +3,13 @@ import { ExternalLink } from 'lucide-react';
 
 const InternshipEcosystem = () => {
   return (
-    <section className="py-20 md:py-28 px-6 bg-[#0B0B0B]">
+    <section className="py-20 md:py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
                 Education & Internships
               </h2>
               <p className="text-lg text-[#A3A3A3] leading-relaxed max-w-lg">

@@ -9,11 +9,11 @@ export default function Insights() {
   ];
 
   return (
-    <section id="insights" className="py-20 md:py-28 px-6 bg-brand-black">
+    <section className="py-20 md:py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-4">
             Why Choose Nexora
           </h2>
           <p className="text-base md:text-lg text-brand-muted leading-relaxed max-w-2xl mx-auto">

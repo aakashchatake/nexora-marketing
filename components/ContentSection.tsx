@@ -13,14 +13,14 @@ export default function ContentSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-brand-black">
+    <section className="py-20 md:py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
         {/* First Row: Text on left, Image on right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text & Features */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-semibold text-black mb-4">
                 Streamline Your Institution
               </h2>
               <p className="text-lg text-brand-muted leading-relaxed">

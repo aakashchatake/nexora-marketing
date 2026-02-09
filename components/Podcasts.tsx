@@ -2,11 +2,11 @@
 
 export default function Podcasts() {
   return (
-    <section id="podcasts" className="py-20 md:py-28 px-6 bg-brand-black">
+    <section id="podcasts" className="py-20 md:py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">Listen to Our Podcasts</h2>
-          <p className="text-base md:text-lg text-brand-muted leading-relaxed max-w-2xl mx-auto">Explore in-depth discussions on AI, machine learning, and academy innovation</p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-4">Listen to Our Podcasts</h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">Explore in-depth discussions on AI, machine learning, and academy innovation</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

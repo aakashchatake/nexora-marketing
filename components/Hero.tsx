@@ -19,13 +19,13 @@ const Hero = () => {
               <Link href="https://aakashchatake.github.io/nexora-platform/#/access" className="w-full sm:w-auto px-8 py-4 bg-[#FF6A00] hover:bg-orange-600 text-white rounded-full font-bold transition-all flex items-center justify-center gap-2">
                 Get Started
               </Link>
-              <Link href="#contact" className="w-full sm:w-auto px-8 py-4 border border-white/20 hover:bg-white/5 text-white rounded-full font-semibold transition-all flex items-center justify-center gap-2">
+              <Link href="#footer" className="w-full sm:w-auto px-8 py-4 border-2 border-[#FF6A00] hover:bg-[#FF6A00]/10 text-[#FF6A00] rounded-full font-semibold transition-all flex items-center justify-center gap-2">
                 Request Demo
               </Link>
             </div>
           </div>
           <div className="relative mt-10 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#141414] aspect-video">
+            <div className="relative rounded-2xl overflow-hidden border border-[#262626] shadow-lg bg-[#141414] aspect-video">
               <img src={asset("/assets/images/Image_01.avif")} alt="Nexora Dashboard" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/60 to-transparent pointer-events-none" />
             </div>
