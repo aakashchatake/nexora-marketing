@@ -17,10 +17,10 @@ const Footer = () => {
               The next-generation academic management system built for modern institutions.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://twitter.com/chatakeinnoworks" className="text-[#525252] hover:text-[#FF6A00] transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="https://linkedin.com/company/chatakeinnoworks" className="text-[#525252] hover:text-[#FF6A00] transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="https://github.com/aakashchatake" className="text-[#525252] hover:text-[#FF6A00] transition-colors"><Github className="w-5 h-5" /></a>
-              <a href="https://youtube.com/@mindforgeai" className="text-[#525252] hover:text-[#FF6A00] transition-colors"><Youtube className="w-5 h-5" /></a>
+              <a href="https://x.com/ChatakeInno" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#FF6A00] transition-colors" title="Twitter/X"><Twitter className="w-5 h-5" /></a>
+              <a href="https://www.linkedin.com/company/chatakeinnoworks" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#FF6A00] transition-colors" title="LinkedIn"><Linkedin className="w-5 h-5" /></a>
+              <a href="https://github.com/Chatake-Innoworks" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#FF6A00] transition-colors" title="GitHub"><Github className="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/chatakeinnoworks" target="_blank" rel="noopener noreferrer" className="text-[#525252] hover:text-[#FF6A00] transition-colors" title="Facebook"><Youtube className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
             <ul className="space-y-4 text-sm text-[#A3A3A3]">
               <li><a href="http://internship.chatakeinnoworks.com" className="hover:text-[#FF6A00] transition-colors">Internship Portal</a></li>
               <li><a href="https://www.chatakeinnoworks.com" className="hover:text-[#FF6A00] transition-colors">Chatake Innoworks</a></li>
-              <li><a href="https://about.chatakeinnoworks.com" className="hover:text-[#FF6A00] transition-colors">About Us</a></li>
+              <li><Link href="/about" className="hover:text-[#FF6A00] transition-colors">Company Profile</Link></li>
               <li><Link href="#podcasts" className="hover:text-[#FF6A00] transition-colors">Mindforge Podcasts</Link></li>
             </ul>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
               <li><Link href="/privacy" className="hover:text-[#FF6A00] transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-[#FF6A00] transition-colors">Terms of Service</Link></li>
               <li><Link href="/security" className="hover:text-[#FF6A00] transition-colors">Security</Link></li>
-              <li><a href="mailto:admin@chatakeinnoworks.com" className="hover:text-[#FF6A00] transition-colors">Contact Support</a></li>
+              <li><Link href="/contact" className="hover:text-[#FF6A00] transition-colors">Contact Support</Link></li>
             </ul>
           </div>
         </div>
